@@ -21,7 +21,7 @@
             </svg>
         </a>
 
-        <nav class="nav">
+        <nav class="nav" id="Cnav" >
 
             <a>Menu</a>
             <a>Gallery</a>
@@ -33,7 +33,7 @@
             <div class="shopping basket" onclick="shoppingCart()">&#128722;</div>
 
 
-            <div class="burger" onclick="patronum(this)">
+            <div class="burger" id="burgr" onclick="patronum(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
@@ -415,6 +415,17 @@
             let page = document.querySelector('.cart-items-container')
             page.classList.toggle('active')            
           }
+            
+             let nav = document.getElementById('Cnav');
+          let bur = document.getElementById('burgr')
+          window.addEventListener('mouseup', (e) => {
+              if(e.target != nav && e.target.parentNode != nav
+              && nav.classList.contains('active')&& e.target != bur)
+              {
+                 nav.classList.remove('active')
+                 bur.classList.remove('change')
+              }
+          })
 
           
 
