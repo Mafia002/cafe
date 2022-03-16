@@ -418,7 +418,7 @@
             
              let nav = document.getElementById('Cnav');
           let bur = document.getElementById('burgr')
-          window.addEventListener('mouseup', (e) => {
+          window.addEventListener('touchmove', (e) => {
               if(e.target != nav && e.target.parentNode != nav
               && nav.classList.contains('active')&& e.target != bur)
               {
