@@ -418,7 +418,7 @@
             
              let nav = document.getElementById('Cnav');
           let bur = document.getElementById('burgr')
-          window.addEventListener('touchmove', (e) => {
+          window.addEventListener('touchstart', (e) => {
               if(e.target != nav && e.target.parentNode != nav
               && nav.classList.contains('active')&& e.target != bur)
               {
